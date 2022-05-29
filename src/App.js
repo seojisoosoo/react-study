@@ -19,9 +19,10 @@ import Box from './box.jsx';
 
 function App() {
   let count = 0;
-  const [count2, setCount2] = useState();
+  const [count2, setCount2] = useState(0);
   const increase = () => {
     count = count + 1;
+    setCount2(count2 + 1);
   };
   return (
     <main>
@@ -29,6 +30,7 @@ function App() {
       <Box name="지원" num="2" />
       <Box name="선영" num="3" /> */}
       <div>{count}</div>
+      <div>state:{count2}</div>
       <button onClick={increase}>증가</button>
     </main>
   );
