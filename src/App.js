@@ -20,10 +20,10 @@ import Box from './box.jsx';
 function App() {
   let count = 0;
   const [count2, setCount2] = useState(0);
-  const increase = () => {
+  function increase() {
     count = count + 1;
     setCount2(count2 + 1);
-  };
+  }
   return (
     <main>
       {/* <Box name="지수" num="1" />
