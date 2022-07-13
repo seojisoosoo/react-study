@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
 
-function Box(props){
-    const clickMe=()=>{
-        alert("리액트끝");
-    }
-    return (
-        <div className="box">
-            Box{props.num} {props.name}
-            <button onClick={clickMe}>click</button>
-        </div>
-    )
+const Styledbox=styled.div`
+border:1px solid blue;
+`
+
+const box = (props) => {
+  return (
+    <Styledbox>{props.name}
+    <button>click!</button></Styledbox>
+  )
 }
 
-export default Box
+export default box
