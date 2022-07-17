@@ -12,6 +12,7 @@ const Home = () => {
       <Link to="/about">
         <Button>소개</Button>
       </Link>
+      <Link to="/profiles/gildong">velopert</Link>
     </>
   );
 };
