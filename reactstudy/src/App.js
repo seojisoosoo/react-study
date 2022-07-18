@@ -1,27 +1,42 @@
 import React, { useState } from 'react';
-import TodoBoard from './components/TodoBoard';
+import axios from 'axios';
+import NewsList from './NewsList';
 
 const App = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [todoList, setTodoList] = useState([]);
-  const addItem = () => {
-    console.log('im herere!', inputValue);
-    setTodoList([...todoList, inputValue]);
-  };
-  const deleteItem = () => {
-    setTodoList([]);
-  };
-  return (
-    <>
-      <input
-        type="text"
-        onChange={(event) => setInputValue(event.target.value)}
-      />
-      <button onClick={addItem}>추가</button>
-      <button onClick={deleteItem}>삭제</button>
-      <TodoBoard todoList={todoList} />
-    </>
-  );
+  // const [data, setData] = useState(null);
+  // // const onClick = () => {
+  // //   axios
+  // //     .get('https://jsonplaceholder.typicode.com/todos/1')
+  // //     .then((response) => {
+  // //       setData(response.data);
+  // //     });
+  // // };
+  // const onClick = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       'https://newsapi.org/v2/top-headlines?country=kr&apiKey=64f917364bbd45f79301273e25e2ebf8'
+  //     );
+  //     setData(response.data);
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
+
+  // return (
+  //   <>
+  //     <div>
+  //       <button onClick={onClick}>불러오기</button>
+  //     </div>
+  //     {data && (
+  //       <textarea
+  //         rows={7}
+  //         value={JSON.stringify(data, null, 2)}
+  //         readOnly={true}
+  //       />
+  //     )}
+  //   </>
+  // );
+  return <NewsList />;
 };
 
 export default App;
